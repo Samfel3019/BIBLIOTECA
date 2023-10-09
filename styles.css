@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(biblioteca.jpg);
+
+}
+
+h1 {
+    color: white;
+    font-family: 'Signika Negative', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 50px;
+}
+
+label {
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+table {
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    border-collapse: collapse;
+    font-size: 30px;
+    table-layout: fixed;
+    margin-top: 100px;
+    margin-left: 200px;
+    width: 1500px;
+}
+
+thead {
+    background: rgba(191, 123, 255, 0.781);
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+tbody {
+    padding: 80px;
+    border-bottom: solid 1px rgba(191, 123, 255, 0.781);
+    height: 20px;
+    text-align: center;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background: rgba(191, 123, 255, 0.404);
+} 
+
+
+
+
+
+
+/* ------------------------------ agregar libro ------------------------------------- */
+
+#agregarLibro {
+    --glow-color: rgb(217 , 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanched-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 20px 35px;
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 120px;
+    font-family: 'Signika Negative', sans-serif;
+}
+#agregarLibro::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+#agregarLibro:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color)
+}
+#agregarLibro:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* ------------------------------ marcar prestado ------------------------------------- */
+
+#marcarPrestado {
+    --glow-color: rgb(217 , 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanched-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 20px 35px;
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 50px;
+    font-family: 'Signika Negative', sans-serif;
+}
+#marcarPrestado::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+#marcarPrestado:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color)
+}
+#marcarPrestado:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* ------------------------------ marcar devuelto ------------------------------------- */
+
+#marcarDevuelto {
+    --glow-color: rgb(217 , 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanched-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 20px 35px;
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 50px;
+    font-family: 'Signika Negative', sans-serif;
+}
+#marcarDevuelto::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+#marcarDevuelto:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color)
+}
+#marcarDevuelto:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* ------------------------------ eliminar libro ------------------------------------- */
+
+#eliminarLibro {
+    --glow-color: rgb(217 , 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanched-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 20px 35px;
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 50px;
+    font-family: 'Signika Negative', sans-serif;
+}
+#eliminarLibro::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+#eliminarLibro:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color)
+}
+#eliminarLibro:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* ------------------------------ ordenar por ------------------------------------- */
+
+#ordenarPor {
+    --glow-color: rgb(217 , 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanched-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 20px 35px;
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 4em 1em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin-left: 50px;
+    font-family: 'Signika Negative', sans-serif;
+}
+#ordenarPor::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+#ordenarPor:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color)
+}
+#ordenarPor:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+

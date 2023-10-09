@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icono.png" type="image/png">
+    <title>BIBLIOTECA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mi Biblioteca</h1>
+
+    <button id="agregarLibro">Agregar Libro</button>
+    <button id="marcarPrestado">Marcar como Prestado</button>
+    <button id="marcarDevuelto">Marcar como Devuelto</button>
+    <button id="eliminarLibro">Eliminar Libro</button>
+    <label for="ordenarPor">Ordenar por:</label>
+    <select id="ordenarPor">
+        <option value="autor">Autor</option>
+        <option value="estado">Estado</option>
+        <option value="titulo">Título</option>
+    </select>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Año de Publicación</th>
+                <th>Estado</th>
+                <th>Prestado A</th>
+            </tr>
+        </thead>
+        <tbody id="listaLibros">
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
